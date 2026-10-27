@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta -->
+  <title>Happy Birthday Zoya! ❤️</title>
+  <meta name="title" content="Happy Birthday Zoya! ❤️ | Meri Pyari Zoi">
+  <meta name="description"
+    content="A romantic birthday surprise page made with all my love for my dearest fiancée Zoya (Pyari Zoi) 💖">
+  <meta name="keywords" content="birthday, happy birthday, Zoya, Zoi, Pyari Zoi, love, celebration">
+  <meta name="author" content="With All My Love">
+  <meta name="robots" content="index, follow">
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#ff4081">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="img/zoi-portrait.jpeg">
+  <link rel="apple-touch-icon" href="img/zoi-portrait.jpeg">
+
+  <!-- Open Graph (Facebook, WhatsApp, Instagram) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Happy Birthday Zoya! 💖 | Meri Pyari Zoi">
+  <meta property="og:description"
+    content="A special romantic birthday surprise page made with all my love for my fiancée Zoya 🎂❤️">
+  <meta property="og:image" content="img/zoi-portrait.jpeg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Happy Birthday Zoya! 💖 | Meri Pyari Zoi">
+  <meta name="twitter:description"
+    content="A special romantic birthday surprise page made with all my love for my fiancée Zoya 🎂❤️">
+  <meta name="twitter:image" content="img/zoi-portrait.jpeg">
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-cake"><i data-lucide="heart"></i></div>
+    <div class="loader-text">Preparing something special for Pyari Zoi...</div>
+    <div class="loader-subtext">28th October • Queen's Birthday 💕</div>
+    <div class="loader-bar">
+      <div class="loader-fill"></div>
+    </div>
+  </div>
+
+  <!-- PROGRESS BAR -->
+  <div class="auto-progress" id="progressBar"></div>
+
+  <!-- PARTICLES / FLOATING HEARTS -->
+  <div class="particles" id="particles"></div>
+
+  <!-- NAV DOTS -->
+  <div class="nav-dots" id="navDots"></div>
+
+  <!-- MUSIC TOGGLE -->
+  <button class="music-toggle" id="musicBtn" title="Play Romantic Melody" aria-label="Toggle Romantic Music">
+    <div class="music-bars">
+      <div class="music-bar"></div>
+      <div class="music-bar"></div>
+      <div class="music-bar"></div>
+      <div class="music-bar"></div>
+    </div>
+  </button>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="this.classList.remove('active')">
+    <img id="lightbox-img" src="" alt="Enlarged Photo">
+  </div>
+
+  <main>
+    <!-- 0: HERO -->
+    <div class="page-section hero visible" data-section="Welcome">
+      <div class="hero-photo-container">
+        <img class="hero-photo" src="img/zoi-portrait-clean.jpeg" alt="Zoya - Pyari Zoi">
+        <div class="hero-photo-heart"><i data-lucide="heart"></i></div>
+      </div>
+      <div class="hero-badge"><i data-lucide="sparkles"></i> 28th October • Happy Birthday My Queen!</div>
+      <h1>Happy Birthday<br>Meri Pyari Zoi! 💖</h1>
+      <p class="hero-sub">To my dearest Zoya, the love of my life <i data-lucide="heart"></i></p>
+
+      <div class="nickname-pills">
+        <span class="nickname-pill">🌸 Meri Zoi</span>
+        <span class="nickname-pill">💖 Pyari Zoi</span>
+      </div>
+
+      <button class="nav-btn" onclick="goToSection(1)">Begin the Journey <i data-lucide="arrow-right"></i></button>
+    </div>
+
+    <!-- 1: SPECIAL MESSAGE -->
+    <div class="page-section" data-section="Message" id="sec-message">
+      <h2 class="section-title"><span class="title-icon"><i data-lucide="heart-handshake"></i></span>A Letter From My
+        Heart</h2>
+      <div class="message-card-wrapper">
+        <div class="message-card">
+          <div class="salutation">Dearest Zoya (Meri Pyari Zoi),</div>
+          <p>Happy Birthday to the girl who stole my heart and made my entire world complete! <i data-lucide="sparkles"
+              class="inline-icon"></i> From the moment you walked into my life, every single day has felt brighter,
+            softer, and filled with genuine happiness.</p>
+          <br>
+          <p>Your cute smile is my absolute favorite sight, your voice is my greatest comfort, and your pure heart
+            inspires me every second. You are not only my gorgeous fiancée, you are my best friend and my forever
+            soulmate.</p>
+          <br>
+          <p>On this special day, <strong>28th October</strong>, I pray that all your sweetest dreams come true, your
+            smile never fades, and your heart is always overflowing with peace and warmth. I promise to stand beside
+            you, love you endlessly, make you laugh, and cherish you through every single step of our life together. <i
+              data-lucide="flower-2" class="inline-icon"></i></p>
+          <br>
+          <p>Meri Allah Ta'ala se dil se dua hai ki Insha'Allah aapko aapke exams aur future me shandar kamyabi mile,
+            aur aapka har sapna poora ho. Tumhari mehnat zaroor rang layegi, aur main hamesha har kadam par tumhare sath
+            khada rahunga. 🌸✨</p>
+
+          <!-- HANDWRITTEN SHOWCASE INSIDE THE CARD -->
+          <div class="handwritten-showcase">
+            <div class="handwritten-polaroid" onclick="openLightbox(this)" title="Click to view handwritten note">
+              <img src="img/zoi-handwritten-clean.jpeg" alt="Handwritten note for Zoya">
+              <div class="polaroid-caption">Just for Zoi ❤️</div>
+            </div>
+            <div class="handwritten-text-box">
+              <h4><i data-lucide="pen-tool"></i> A Handwritten Note for You</h4>
+              <p style="font-style: italic; line-height: 1.8; color: var(--accent4);">
+                “Saal ka ye sabse khaas din mubarak ho,<br>
+                Mere pyare dost ko janamdin mubarak ho...!<br>
+                Happy Birthday...!!!!” 🌸💖
+              </p>
+            </div>
+          </div>
+
+          <div class="signature">
+            Forever & Always Yours <i data-lucide="heart"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-nav">
+        <button class="nav-btn" onclick="goToSection(0)"><i data-lucide="chevron-left"></i> Back</button>
+        <button class="nav-btn" onclick="goToSection(2)">Cherished Photos <i data-lucide="chevron-right"></i></button>
+      </div>
+    </div>
+
+    <!-- 2: PHOTOS -->
+    <div class="page-section" data-section="Photos" id="sec-photos">
+      <h2 class="section-title"><span class="title-icon"><i data-lucide="camera"></i></span>Cherished Moments with Zoi
+      </h2>
+      <div class="gallery">
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img loading="lazy" src="img/zoi-portrait-clean.jpeg" alt="Zoi - The Flower in My Life">
+          <div class="gallery-overlay"><span><i data-lucide="flower-2"></i> The Flower in My Life</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img loading="lazy" src="img/zoi-cute-clean.jpeg" alt="Zoi - That Cute Smile">
+          <div class="gallery-overlay"><span><i data-lucide="smile"></i> That Innocent Cute Smile</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img loading="lazy" src="img/zoi-traditional-clean.jpeg" alt="Zoi - My Elegant Princess">
+          <div class="gallery-overlay"><span><i data-lucide="sparkles"></i> Grace & Pure Elegance</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img loading="lazy" src="img/zoi-monument-clean.jpeg" alt="Zoi - Queen of My Heart">
+          <div class="gallery-overlay"><span><i data-lucide="crown"></i> Queen of My Heart</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img loading="lazy" src="img/zoi-style-clean.jpeg" alt="Zoi - My Stylish Girl">
+          <div class="gallery-overlay"><span><i data-lucide="sun"></i> Radiance & Swag</span></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img loading="lazy" src="img/zoi-handwritten-clean.jpeg" alt="Handwritten Happy Birthday Zoya">
+          <div class="gallery-overlay"><span><i data-lucide="heart"></i> Handwritten with Love</span></div>
+        </div>
+      </div>
+      <div class="section-nav">
+        <button class="nav-btn" onclick="goToSection(1)"><i data-lucide="chevron-left"></i> Back</button>
+        <button class="nav-btn" onclick="goToSection(3)">Next: Make a Wish <i data-lucide="chevron-right"></i></button>
+      </div>
+    </div>
+
+    <!-- 3: CAKE -->
+    <div class="page-section" data-section="Cake" id="sec-cake">
+      <h2 class="section-title"><span class="title-icon"><i data-lucide="cake"></i></span>Make a Wish, Pyari Zoi!</h2>
+      <div class="cake-section">
+        <div class="cake-container" id="cakeBox">
+          <div class="candle-glow"></div>
+          <div class="cake-emoji"><i data-lucide="cake"></i></div>
+        </div>
+        <p style="color:var(--text-muted);margin-bottom:1rem;font-size:1.05rem">Close your eyes, make a sweet wish for
+          our future together, and blow! <i data-lucide="wind" class="inline-icon"></i></p>
+        <button class="blow-btn" onclick="blowCandles()"><i data-lucide="wind"></i> Blow the Candles, Zoi!</button>
+      </div>
+      <div class="section-nav">
+        <button class="nav-btn" onclick="goToSection(2)"><i data-lucide="chevron-left"></i> Back</button>
+        <button class="nav-btn" onclick="goToSection(4)">Special Wishes <i data-lucide="chevron-right"></i></button>
+      </div>
+    </div>
+
+    <!-- 4: WISHES -->
+    <div class="page-section" data-section="Wishes" id="sec-wishes">
+      <h2 class="section-title"><span class="title-icon"><i data-lucide="gift"></i></span>My Wishes For You</h2>
+      <div class="wishes-grid">
+        <div class="wish-card">
+          <div class="wish-icon"><i data-lucide="heart"></i></div>
+          <div class="wish-title">Eternal Love</div>
+          <p class="wish-text">May the love, trust, and connection we share grow deeper, sweeter, and stronger with
+            every single heartbeat.</p>
+        </div>
+        <div class="wish-card">
+          <div class="wish-icon"><i data-lucide="crown"></i></div>
+          <div class="wish-title">Queen of My Heart</div>
+          <p class="wish-text">You rule my heart today, tomorrow, and for all eternity. There is no one in this world
+            like my Zoi.</p>
+        </div>
+        <div class="wish-card">
+          <div class="wish-icon"><i data-lucide="smile"></i></div>
+          <div class="wish-title">Endless Smiles</div>
+          <p class="wish-text">May your face always glow with that cute smile. Your laughter is my favorite melody in
+            the whole universe.</p>
+        </div>
+        <div class="wish-card">
+          <div class="wish-icon"><i data-lucide="sparkles"></i></div>
+          <div class="wish-title">Dreams Fulfilled</div>
+          <p class="wish-text">May every little wish and silent prayer in your heart come true this year and bring you
+            pure happiness.</p>
+        </div>
+        <div class="wish-card">
+          <div class="wish-icon"><i data-lucide="ring"></i></div>
+          <div class="wish-title">Our Beautiful Forever</div>
+          <p class="wish-text">Here is to all our upcoming adventures, late-night chats, and growing old together
+            hand-in-hand as soulmates.</p>
+        </div>
+        <div class="wish-card">
+          <div class="wish-icon"><i data-lucide="sun"></i></div>
+          <div class="wish-title">Infinite Blessings</div>
+          <p class="wish-text">May good health, peace, success, and prosperity follow you everywhere you go today and
+            always.</p>
+        </div>
+      </div>
+      <div class="section-nav">
+        <button class="nav-btn" onclick="goToSection(3)"><i data-lucide="chevron-left"></i> Back</button>
+        <button class="nav-btn" onclick="goToSection(5)">Celebration Vibes <i data-lucide="chevron-right"></i></button>
+      </div>
+    </div>
+
+    <!-- 5: GIF CELEBRATION -->
+    <div class="page-section" data-section="Celebrate" id="sec-gifs">
+      <h2 class="section-title"><span class="title-icon"><i data-lucide="party-popper"></i></span>Celebration Vibes for
+        Zoya</h2>
+      <div class="gif-grid">
+        <div class="gif-item">
+          <img loading="lazy"
+            src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyeXBzMDZ3djd6ZnAxZjJkcmVoZ28weGlrYzl5M3ZrbTFraWZ4Y3J6dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0MYt5jPR6QX5pnqM/giphy.gif"
+            alt="Celebration">
+        </div>
+        <div class="gif-item">
+          <img loading="lazy"
+            src="https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUycmJieHBuNjN3bDk3OGg1ZG9za203aDlrMjV1cDJvb24wNTV4bTg2cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lMameLIF8voLu8HxWV/giphy.gif"
+            alt="Birthday">
+        </div>
+        <div class="gif-item">
+          <img loading="lazy"
+            src="https://media3.giphy.com/media/v1.Y2lkPTZjMDliOTUyd295Z2tmNDdiOGphd3NvanlhbDJrbzRkYm9qOHl2aTRhZ3dtc2prMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cmJmdyNCM0XgtUazQl/giphy.gif"
+            alt="Party">
+        </div>
+      </div>
+      <div class="section-nav" style="margin-top:2.2rem">
+        <button class="nav-btn" onclick="goToSection(4)"><i data-lucide="chevron-left"></i> Back</button>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>Made with endless <span class="heart"><i data-lucide="heart"></i></span> just for my Pyari Zoi (Zoya)</p>
+      <div class="footer-tag">
+        <i data-lucide="sparkles"></i> 28th October • Forever & Always Together
+      </div>
+    </footer>
+  </main>
+
+  <!-- BG MUSIC -->
+  <audio id="bgMusic" loop preload="none">
+    <source src="https://files.catbox.moe/j0gnqj.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- LUCIDE ICONS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

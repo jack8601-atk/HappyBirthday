@@ -18,7 +18,8 @@ allSections.forEach((sec, i) => {
 function goToSection(index) {
   if (index < 0 || index >= allSections.length) return;
   currentSection = index;
-  allSections[index].scrollIntoView({ behavior: 'smooth' });
+  allSections[index].classList.add('visible');
+  allSections[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
   updateActiveDot();
   updateProgress();
   resetAutoScroll();
@@ -48,11 +49,13 @@ const sectionObserver = new IntersectionObserver((entries) => {
       }
     }
   });
-}, { threshold: 0.4 });
+}, { threshold: 0.1 });
 allSections.forEach(s => sectionObserver.observe(s));
 
 // AUTO SCROLL
 function startAutoScroll() {
+  // Disable auto-scroll on small mobile screens to let users read at their own pace
+  if (window.innerWidth <= 768) return;
   autoScrollTimer = setInterval(() => {
     if (currentSection < allSections.length - 1) {
       goToSection(currentSection + 1);
@@ -72,11 +75,13 @@ function hideLoader() {
   const loader = document.getElementById('loader');
   if (!loader || loader.classList.contains('hide')) return;
   loader.classList.add('hide');
+  allSections.forEach(s => s.classList.add('visible'));
   triggerHeartConfetti(70);
   startAutoScroll();
 }
 const hardCapTimer = setTimeout(hideLoader, 2500);
 document.addEventListener('DOMContentLoaded', () => {
+  allSections.forEach(s => s.classList.add('visible'));
   setTimeout(() => {
     clearTimeout(hardCapTimer);
     hideLoader();

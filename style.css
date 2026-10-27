@@ -119,9 +119,9 @@ body::after{
 .nav-btn svg{width:1.1rem;height:1.1rem;flex-shrink:0}
 
 /* FULL PAGE SECTIONS */
-.page-section{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 1.5rem;position:relative;opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
-.page-section.visible{opacity:1;transform:translateY(0)}
-.page-section.active-section{opacity:1;transform:translateY(0)}
+.page-section{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3.5rem 1.5rem;position:relative;opacity:1;transform:none}
+.page-section.visible{opacity:1;transform:none}
+.page-section.active-section{opacity:1;transform:none}
 
 main{position:relative;z-index:1;max-width:960px;margin:0 auto;width:100%}
 
@@ -517,16 +517,36 @@ footer .footer-tag svg{width:.95rem;height:.95rem;color:var(--accent-pink)}
 .auto-progress{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--accent3),var(--accent-pink));z-index:300;transition:width .3s;width:0;box-shadow:0 0 10px var(--glow-strong)}
 
 /* RESPONSIVE */
-@media(max-width:600px){
-  main{padding:0 1rem}
-  .hero-photo{width:160px;height:160px}
-  .message-card{padding:1.6rem}
-  .handwritten-showcase{flex-direction:column;text-align:center}
-  .handwritten-polaroid{max-width:220px}
-  .gallery{grid-template-columns:repeat(2,1fr)}
+@media(max-width:768px){
+  main{padding:0 0.8rem}
+  .page-section{
+    min-height:auto;
+    padding:4rem 0.5rem 3rem;
+    opacity:1 !important;
+    transform:none !important;
+  }
+  .hero{
+    min-height:100vh;
+    padding:3.5rem 1rem 2rem;
+  }
+  .message-card{
+    padding:1.6rem 1.2rem;
+    width:100%;
+  }
+  .handwritten-showcase{
+    flex-direction:column;
+    text-align:center;
+    padding:1.2rem;
+    gap:1rem;
+  }
+  .handwritten-polaroid{
+    max-width:240px;
+    margin:0 auto;
+  }
+  .gallery{grid-template-columns:repeat(2,1fr);gap:0.8rem}
   .gif-grid{grid-template-columns:1fr}
   .wishes-grid{grid-template-columns:1fr}
-  .nav-dots{right:.5rem;gap:.5rem}
+  .nav-dots{right:.4rem;gap:.5rem}
   .nav-dot{width:11px;height:11px}
   .nav-label{display:none}
 }

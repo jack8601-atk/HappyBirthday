@@ -19,7 +19,12 @@ function goToSection(index) {
   if (index < 0 || index >= allSections.length) return;
   currentSection = index;
   allSections[index].classList.add('visible');
-  allSections[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const target = allSections[index];
+  const targetTop = target.offsetTop || target.getBoundingClientRect().top + window.pageYOffset;
+  window.scrollTo({ top: targetTop, behavior: 'smooth' });
+  try {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } catch (e) {}
   updateActiveDot();
   updateProgress();
   resetAutoScroll();

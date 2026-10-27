@@ -41,7 +41,7 @@
     rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3.5">
 </head>
 
 <body>
@@ -82,7 +82,8 @@
 
   <main>
     <!-- 0: HERO -->
-    <div class="page-section hero visible" data-section="Welcome">
+    <div class="page-section hero visible" data-section="Welcome"
+      style="opacity: 1 !important; visibility: visible !important;">
       <div class="hero-photo-container">
         <img class="hero-photo" src="img/zoi-portrait-clean.jpeg" alt="Zoya - Pyari Zoi">
         <div class="hero-photo-heart"><i data-lucide="heart"></i></div>
@@ -100,11 +101,12 @@
     </div>
 
     <!-- 1: SPECIAL MESSAGE -->
-    <div class="page-section" data-section="Message" id="sec-message">
+    <div class="page-section visible" data-section="Message" id="sec-message"
+      style="opacity: 1 !important; visibility: visible !important;">
       <h2 class="section-title"><span class="title-icon"><i data-lucide="heart-handshake"></i></span>A Letter From My
         Heart</h2>
-      <div class="message-card-wrapper">
-        <div class="message-card">
+      <div class="message-card-wrapper" style="opacity: 1 !important; visibility: visible !important;">
+        <div class="message-card" style="opacity: 1 !important; visibility: visible !important;">
           <div class="salutation">Dearest Zoya (Meri Pyari Zoi),</div>
           <p>Happy Birthday to the girl who stole my heart and made my entire world complete! <i data-lucide="sparkles"
               class="inline-icon"></i> From the moment you walked into my life, every single day has felt brighter,
@@ -295,7 +297,7 @@
   <!-- LUCIDE ICONS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.383.0/dist/umd/lucide.min.js"></script>
 
-  <script src="main.js"></script>
+  <script src="main.js?v=3.5"></script>
 </body>
 
 </html>
